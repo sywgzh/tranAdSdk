@@ -1,9 +1,13 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.sywgzh'
+
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
         classpath 'com.android.tools.build:gradle:2.2.1'
         classpath 'com.google.gms:google-services:3.0.0'
         classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.12'
@@ -30,13 +34,4 @@ allprojects {
             url  "https://adcolony.bintray.com/AdColony"
         }
     }
-}
-
-configurations.all {
-    resolutionStrategy.cacheDynamicVersionsFor 5, 'minutes'
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
