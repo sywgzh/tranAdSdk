@@ -1,7 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.sywgzh'
 
 android {
     compileSdkVersion 26
@@ -28,14 +25,8 @@ android {
 
 }
 
-repositories {
-    flatDir {
-        dirs '../adsdk/libs'
-    }
-}
-
 dependencies {
-    compile(name: 'sdk', ext: 'aar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':admobLib')
     compile project(':ironSourceLib')
     compile 'com.google.code.gson:gson:2.8.0'
