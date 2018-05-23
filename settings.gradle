@@ -1,1 +1,1 @@
-include ':adsdk', ':admobLib', ':ironSourceLib', ':demo'
+include ':adsdk', ':admobLib', ':ironSourceLib'
